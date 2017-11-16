@@ -4,7 +4,7 @@ import java.util.Arrays;
  * Created by fang on 2017/11/14.
  * 排序算法，java描述
  */
-public class SortArithmetic {
+public class sortArithmetic {
     final int MAX = 5;
     int num[] = new int[MAX];
     //构造块
@@ -17,7 +17,7 @@ public class SortArithmetic {
         System.out.println();
     }
 
-    public SortArithmetic(){
+    public sortArithmetic(){
 //        bubSort(num.clone()); //冒泡排序法。
 //        selectSort(num.clone()); //选择排序法。
         quickSort_one(num.clone());//快速排序法。
@@ -26,7 +26,7 @@ public class SortArithmetic {
 
     public static void main(String[] args) {
         System.out.println("开始执行..........");
-        new SortArithmetic();
+        new sortArithmetic();
     }
 
     /**
