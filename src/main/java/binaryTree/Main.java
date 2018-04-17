@@ -39,6 +39,7 @@ public class Main {
         nodeA.preOrderUnRecur(nodeA);
         nodeA.inOrderUnRecur(nodeA);
         nodeA.posOrderUnRecur1(nodeA);
+        nodeA.posOrderUnRecur2(nodeA);
     }
 
 }

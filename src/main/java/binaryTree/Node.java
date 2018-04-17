@@ -81,7 +81,7 @@ public class Node {
         System.out.println();
     }
 
-
+    //用两个队列形式
     public void posOrderUnRecur1(Node head){
         System.out.print("pos-order: ");
         if(head !=null){
@@ -105,6 +105,27 @@ public class Node {
             }
         }
 
+        System.out.println();
+    }
+    //一个队列的形式
+    public void posOrderUnRecur2(Node head){
+        System.out.print("pos-order2 使用一个栈: ");
+        if(head!=null){
+            Stack<Node> stack = new Stack<Node>();
+            stack.push(head);
+            Node c = null;
+            while (!stack.isEmpty()){
+                c = stack.peek();
+                if(c.left!=null && head!= c.left && head!=c.right){
+                    stack.push(c.left);
+                }else if(c.right!=null && head!=c.right){
+                    stack.push(c.right);
+                }else {
+                    System.out.print(stack.pop().value + " ");
+                    head = c;
+                }
+            }
+        }
         System.out.println();
     }
 }
