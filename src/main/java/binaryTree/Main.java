@@ -34,7 +34,11 @@ public class Main {
         nodeA.inOrderRecur(nodeA);//中序
         System.out.println();
         nodeA.postOrder(nodeA);//后序
-
+        System.out.println();
+        System.out.println("非递归方式打印输出-----");
+        nodeA.preOrderUnRecur(nodeA);
+        nodeA.inOrderUnRecur(nodeA);
+        nodeA.posOrderUnRecur1(nodeA);
     }
 
 }
