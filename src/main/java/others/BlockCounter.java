@@ -89,19 +89,19 @@ public class BlockCounter {
             mark(i, j + 1, identify);
         }
     }
-
+    //get alone cells
     private int countAloneCells() {
         int count = 0;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                if (hasSomething(i, j) && isAlone(i, j)) {
+                if (hasSomething(i, j) && isAlone(i, j)) {// 判断0 还是1 再判断是否为单独的一个1
                     count++;
                 }
             }
         }
         return count;
     }
-
+    //get together cells
     private int countTogetherCells() {
         reset();
         int count = 0;
@@ -118,7 +118,7 @@ public class BlockCounter {
         }
         return count;
     }
-
+    //总块数 alone + together
     public int count() {
         return countAloneCells() + countTogetherCells();
     }
