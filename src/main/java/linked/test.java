@@ -50,22 +50,6 @@ public class test {
             if(j-1>0 && a[i][j-1]==1){
                 search(a,aCopy,i,j-1);
             }
-//            if(i+1<testArr[0].length){//判断列长度
-//                search(testArr,testArrCopy,i+1,j);
-//            }
-//            if(i-1>0){
-//                search(testArr,testArrCopy,i-1,j);
-//            }
-//            if(j+1<testArr.length){
-//                search(testArr,testArrCopy,i,j+1);
-//            }
-//            if(j-1>0){
-//                search(testArr,testArrCopy,i,j-1);
-//            }
-//        }else {
-//            search(testArr,testArrCopy,i,j);
-//        }
-
         }
     }
     public static void showGrid(int[][] a) {
@@ -80,7 +64,7 @@ public class test {
     public static void main(String[] args) {
 
         int[][] testArr = createRandomArr(4, 4);
-        int[][] testArrCopy = createRandomArrCopy(6,6);//flag数组
+        int[][] testArrCopy = createRandomArrCopy(4,4);//flag数组
         System.out.println("原始数组为---");
         showGrid(testArr);
 
