@@ -17,7 +17,7 @@ public class BlockCounterTest {
     }
 
     public static void main(String[] args) {
-        int[][] testArr = createRandomArr(6, 6);
+        int[][] testArr = createRandomArr(4, 4);
         BlockCounter blockCounter = new BlockCounter(testArr);
         blockCounter.setDefaultReset(false);// 此语句影响grid数组内容,如非默认重置则需要手动重置,必须在count执行前设置
         System.out.println("原数组:");

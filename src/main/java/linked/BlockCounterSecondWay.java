@@ -2,7 +2,7 @@ package linked;
 
 import java.util.Random;
 
-public class test {
+public class BlockCounterSecondWay {
     // 生成一个随机的二维数组
     public static int[][] createRandomArr(int rows, int cols) {
         Random random = new Random();
@@ -33,7 +33,7 @@ public class test {
 
     //设置周围的是否为1,对照数组设置为1
     public static void search(int[][]a ,int[][]aCopy,int i,int j){
-        if(aCopy[i][j] ==1 ){
+        if(aCopy[i][j] ==1 || a[i][j]==0 ){
             return;
         }else {
             aCopy[i][j] = 1;
@@ -64,6 +64,7 @@ public class test {
     public static void main(String[] args) {
 
         int[][] testArr = createRandomArr(4, 4);
+        //标记数组:大小和元素组一样,初始化数组值均为0; 原数组如果位置上为1,则标记数组对应位置则为1,标记原数组该位置上有数值;原数组为0,则标记数组对应的位置则为2;
         int[][] testArrCopy = createRandomArrCopy(4,4);//flag数组
         System.out.println("原始数组为---");
         showGrid(testArr);
@@ -73,8 +74,12 @@ public class test {
                 if(testArr[i][j]==1 && testArrCopy[i][j] ==0){
                     count++;
                     search(testArr,testArrCopy,i,j);
-                }else {
-                    testArrCopy[i][j]=1;
+                }
+                else {
+                    if(testArrCopy[i][j] ==0){
+                        testArrCopy[i][j]=2;
+                    }
+
                 }
             }
         }
