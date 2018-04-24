@@ -56,14 +56,25 @@ public class SingleLinkedListReverse {
         node2.next = node3;
         node3.next = node4;
         node4.next = node5;
-        System.out.println("原始链表:" +node1.value + "-->" + node1.next.value+"-->" + node1.next.next.value+"-->"
-                + node1.next.next.next.value+ "-->" +node1.next.next.next.next.value);
+        Node head = node1;
+        System.out.println("原始链表:");
+        while (head!=null){
+            System.out.print(head.value + "-->");
+            head = head.next;
+        }
 
         Node nodeNew1 = new Node(0);
-        nodeNew1 = reversePart(node1,2,4);
-        System.out.println("反转从2 到 节点4的链表---,结果如下");
-        System.out.println("反转部分链表后结果:" +nodeNew1.value + "-->" + nodeNew1.next.value+"-->" + nodeNew1.next.next.value+"-->"
-                + nodeNew1.next.next.next.value+ "-->" +nodeNew1.next.next.next.next.value);
+        nodeNew1 = reversePart(node1,1,5);
+        System.out.println("");
+        System.out.println("链表反转后结果如下:");
+
+        Node start = nodeNew1;
+        while (start !=null){
+            System.out.print(start.value + "-->");
+            start = start.next;
+        }
+//        System.out.println("反转部分链表后结果:" +nodeNew1.value + "-->" + nodeNew1.next.value+"-->" + nodeNew1.next.next.value+"-->"
+//                + nodeNew1.next.next.next.value+ "-->" +nodeNew1.next.next.next.next.value);
 
     }
 
