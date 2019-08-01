@@ -29,11 +29,11 @@ public class GetMinStackDemo {
     public void  push(int newNum){
         if(this.stackMin.isEmpty()){
             this.stackMin.push(newNum);
-        }else if(newNum < this.getmin()){
+        }else if(newNum <= this.getmin()){
             this.stackMin.push(newNum);
         }
 
-        this.stackMin.push(newNum);
+        this.stackData.push(newNum);
     }
 
     public int  pop(){
@@ -54,9 +54,12 @@ public class GetMinStackDemo {
             getMinStackDemo.push(array[i]);
 
         }
-        System.out.println("通过两个栈获得最小元素为:--" +getMinStackDemo.stackMin.pop());
+        //输出minStack栈中的值;
+        for(int i:getMinStackDemo.stackMin){
+            System.out.println(i);
+        }
 
-
+        System.out.println("通过两个栈获得最小元素为:--" +getMinStackDemo.stackMin.peek());
     }
 
 }
