@@ -28,18 +28,48 @@ public class Main {
         nodeA.left = nodeB;
         nodeA.right = nodeC;
 
+        Node node1 = new Node();
+        Node node2 = new Node();
+        Node node3 = new Node();
+        Node node4 = new Node();
+        Node node5 = new Node();
+        Node node6 = new Node();
+        Node node7 = new Node();
+        Node node8 = new Node();
+        node1.value="1";
+        node2.value="2";
+        node3.value="3";
+        node4.value="4";
+        node5.value="5";
+        node6.value="6";
+        node7.value="7";
+        node8.value="8";
+        node1.left=node2;
+        node1.right=node3;
+        node2.left=node4;
+        node2.right=node5;
+        node5.left=node7;
+        node5.right=node8;
+        node3.right=node6;
+
+        nodeA.preOrderRecur(node1);//先序
+        System.out.println();
+        nodeA.inOrderRecur(node1);//中序
+        System.out.println();
+        nodeA.postOrder(node1);//后序
+        System.out.println();
 
         nodeA.preOrderRecur(nodeA);//先序
         System.out.println();
         nodeA.inOrderRecur(nodeA);//中序
         System.out.println();
         nodeA.postOrder(nodeA);//后序
-        System.out.println();
-        System.out.println("非递归方式打印输出-----");
-        nodeA.preOrderUnRecur(nodeA);
-        nodeA.inOrderUnRecur(nodeA);
-        nodeA.posOrderUnRecur1(nodeA);
-        nodeA.posOrderUnRecur2(nodeA);
+//        System.out.println();
+//        System.out.println("非递归方式打印输出-----");
+//        nodeA.preOrderUnRecur(nodeA);
+//        nodeA.inOrderUnRecur(nodeA);
+//        nodeA.posOrderUnRecur1(nodeA);
+//        nodeA.posOrderUnRecur2(nodeA);
     }
 
 }
