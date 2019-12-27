@@ -41,6 +41,7 @@ public class GetMinStackDemo {
             throw new  RuntimeException("you stack is empty.");
         }
         int value = this.stackData.pop();
+        //pop的同时也要把stack min栈中的数据pop
         if(value == this.getmin()){
             this.stackMin.pop();
         }
@@ -52,14 +53,11 @@ public class GetMinStackDemo {
         Integer array[] = new Integer[]{3,4,5,1,2,1};
         for (int i = 0; i < array.length; i++) {
             getMinStackDemo.push(array[i]);
-
         }
         //输出minStack栈中的值;
-        for(int i:getMinStackDemo.stackMin){
-            System.out.println(i);
-        }
+        System.out.println(getMinStackDemo.stackData.peek());
 
-        System.out.println("通过两个栈获得最小元素为:--" +getMinStackDemo.stackMin.peek());
+        System.out.println("获得栈中最小值"+getMinStackDemo.stackMin.peek());
     }
 
 }

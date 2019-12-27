@@ -26,7 +26,7 @@ public class GetMinStackDemo2 {
     public void push(int newNum){
         if(this.stackMin.isEmpty()){
             this.stackMin.push(newNum);
-            //新入栈的数据和当前最小值比较;
+            //新入栈的数据和当前最小值比较;小于等于stack min中的值,则压入stackMin;
         }else if(newNum<=this.getMin()){
             this.stackMin.push(newNum);
         }else {
@@ -36,38 +36,33 @@ public class GetMinStackDemo2 {
         this.stackData.push(newNum);
     }
 
-
-
     //返回当前最小值,栈顶元素是当前最小值;
     public int getMin(){
         if(this.stackMin.isEmpty()){
             throw new RuntimeException("the min stack is empty");
         }
-
         return this.stackMin.peek();
     }
+
     public int pop(){
         if(this.stackData.isEmpty()){
             throw new RuntimeException("you stack is empty");
         }
-
+        //同时弹出stack min中的内容
         this.stackMin.pop();
         return this.stackData.pop();
     }
 
     public static void main(String[] args) {
         GetMinStackDemo2 getMinStackDemo2 = new GetMinStackDemo2();
-        int array[] = {3,4,5,1,2,1};//栈先进后出;
-        //先压入数据栈中;
+        Integer array[] = new Integer[]{3,4,5,1,2,1};
         for (int i = 0; i < array.length; i++) {
             getMinStackDemo2.push(array[i]);
         }
+        //输出minStack栈中的值;
+        System.out.println(getMinStackDemo2.stackData.peek());
 
-        //最后stackData栈中全部弹出,获取min栈中的顺序, 从最小数据开始;
-        for (int i : getMinStackDemo2.stackMin) {
-            System.out.println("依次打印-- " + i);
-        }
-        System.out.println("打印出最小值: " + getMinStackDemo2.stackMin.peek());
+        System.out.println("获得栈中最小值"+getMinStackDemo2.stackMin.peek());
 
     }
 }

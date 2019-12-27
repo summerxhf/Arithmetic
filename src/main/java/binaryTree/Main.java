@@ -51,7 +51,7 @@ public class Main {
         node5.left=node7;
         node5.right=node8;
         node3.right=node6;
-
+        System.out.println("递归方式调用---");
         nodeA.preOrderRecur(node1);//先序
         System.out.println();
         nodeA.inOrderRecur(node1);//中序
@@ -59,17 +59,13 @@ public class Main {
         nodeA.postOrder(node1);//后序
         System.out.println();
 
-        nodeA.preOrderRecur(nodeA);//先序
-        System.out.println();
-        nodeA.inOrderRecur(nodeA);//中序
-        System.out.println();
-        nodeA.postOrder(nodeA);//后序
-//        System.out.println();
-//        System.out.println("非递归方式打印输出-----");
-//        nodeA.preOrderUnRecur(nodeA);
-//        nodeA.inOrderUnRecur(nodeA);
-//        nodeA.posOrderUnRecur1(nodeA);
-//        nodeA.posOrderUnRecur2(nodeA);
+        System.out.println("非递归方式打印输出-----");
+        node1.preOrderUnRecur(node1);
+        node1.inOrderUnRecur(node1);
+        node1.posOrderUnRecur1(node1);
+        node1.posOrderUnRecur2(node1);
+
+
     }
 
 }

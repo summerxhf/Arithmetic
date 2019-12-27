@@ -35,7 +35,6 @@ public class Node {
         if(head==null){
             return;
         }
-
         postOrder(head.left);
         postOrder(head.right);
         System.out.print(head.value + " ");
