@@ -1,6 +1,5 @@
 package chapter1_StackAndQueue;
 
-import com.sun.javafx.image.IntPixelGetter;
 
 import java.util.Stack;
 
