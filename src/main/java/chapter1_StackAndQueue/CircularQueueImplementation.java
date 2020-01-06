@@ -19,8 +19,9 @@ public class CircularQueueImplementation {
         circularQueue.enqueue(21);
         circularQueue.enqueue(22);
         System.out.println("full circular queue " + circularQueue);
-        System.out.print("Dequeue following element from circular Queue");
+        System.out.print("Dequeue following element from circular Queue ");
         System.out.println(circularQueue.dequeue() + " ");
+        System.out.println("出队15后结果" + circularQueue);
         circularQueue.enqueue(23);
         System.out.println("23入队后队列结果");
         System.out.println(circularQueue);
@@ -102,7 +103,7 @@ class CircularQueue<E>{
     }
     @Override
     public String toString(){
-        return "循环队列 [" + Arrays.toString(circularQueueElements) + " ]";
+        return "循环队列 " + Arrays.toString(circularQueueElements) + " ";
     }
 }
 
