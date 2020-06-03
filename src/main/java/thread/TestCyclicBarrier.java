@@ -25,6 +25,7 @@ public class TestCyclicBarrier {
             new Thread(()->{
                 try {
                     barrier.await();
+                    System.out.println(Thread.currentThread().getName()+"开始运行");
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
