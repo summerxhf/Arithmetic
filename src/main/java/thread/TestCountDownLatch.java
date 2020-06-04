@@ -30,13 +30,12 @@ public class TestCountDownLatch {
         for (int i = 0; i < threads.length; i++) {
             threads[i].start();
         }
-//        try{
-//            latch.wait();
-//        }catch (InterruptedException e){
-//            e.printStackTrace();
-//        }
-        System.out.println(latch.getCount() +"end latch");
-        System.out.println(1);
+        try{
+            latch.await();
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("end latch");
     }
 
     private static void usingJoin() {
