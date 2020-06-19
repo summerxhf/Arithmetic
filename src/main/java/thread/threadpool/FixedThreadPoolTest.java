@@ -1,6 +1,5 @@
 package thread.threadpool;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,6 +13,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class FixedThreadPoolTest {
     public static void main(String[] args) throws InterruptedException{
+        //固定大小线程数, 5个线程;任务数为
+        //WorkingQueue长度为Integer.MAX_VALUE
         ExecutorService service = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 6; i++) {
             service.execute(()->{
