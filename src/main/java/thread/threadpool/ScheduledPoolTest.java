@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * User: XINGHAIFANG
  * Date: 2020/6/19
  * Time: 15:31
- * 定时任务使用;
+ * 定时任务使用; /ɪɡˈzekjətə(r)/
  */
 public class ScheduledPoolTest {
     public static void main(String[] args) {
