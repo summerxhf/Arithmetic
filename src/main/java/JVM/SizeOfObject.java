@@ -14,6 +14,7 @@ public class SizeOfObject {
         P p = new P();
         System.out.println("自定义P对象大小-- "+RamUsageEstimator.sizeOf(p));
         System.out.println("RamUsageEstimator.sizeOf(Object obj)大小---"+RamUsageEstimator.sizeOf(o));
+        System.out.println("RamUsageEstimator.sizeOf(new int[]{})大小---"+RamUsageEstimator.sizeOf(new int[]{}));
     }
     private static class P {
         //8 _markword
