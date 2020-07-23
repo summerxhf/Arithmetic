@@ -1,5 +1,5 @@
-package thread.JMH;
-
+package jmh;
+import thread.JMH.PS;
 import org.openjdk.jmh.annotations.Benchmark;
 
 /**

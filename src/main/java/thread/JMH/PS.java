@@ -19,7 +19,7 @@ public class PS {
         for (int i = 0; i < 10000; i++) nums.add(1000000 + r.nextInt(1000000));
     }
 
-    static void foreach() {
+    public static void foreach() {
         nums.forEach(v->isPrime(v));
     }
 
